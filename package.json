@@ -1,0 +1,13 @@
+{
+  "name": "comparison-slider",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel serve ./index.html --open firefox",
+    "build": "parcel build ./index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "latest",
+    "parcel": "latest",
+    "sharp": "^0.29.3"
+  }
+}
