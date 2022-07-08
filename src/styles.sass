@@ -3,15 +3,39 @@
     margin: 0 auto
     width: 600px
     height: 330px
+    user-select: none
 
     &__image
         position: absolute
         left: 0
         top: 0
+        height: 100%
+
+        img
+            outline: none
+
+            &:focus
+                outline: none
 
         &--color
+            overflow: hidden
             z-index: 1
+            width: 0
 
         &--gray
+            width: 100%
             z-index: 0
+
+    &__track
+        position: absolute
+        left: -25px
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 5
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background-color: rgba(#000, 0.7)
+        border: 2px solid rgba(256, 256, 256, 0.5)
+        cursor: pointer
 
