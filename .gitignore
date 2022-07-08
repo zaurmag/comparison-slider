@@ -3,3 +3,4 @@
 /.parcel-cache/
 /.idea/
 /yarn-error.log
+/dist/
