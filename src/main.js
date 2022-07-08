@@ -1,5 +1,6 @@
 import './styles.sass'
-import comparison from './js/comparison'
+import { Comparison } from './js/comparison'
 
-window.comparison = comparison
-comparison.init()
+new Comparison('#comparisonSlider', {
+  start: 'center'
+})
