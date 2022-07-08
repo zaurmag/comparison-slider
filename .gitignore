@@ -2,5 +2,4 @@
 /package-lock.json
 /.parcel-cache/
 /.idea/
-/dist/
 /yarn-error.log
