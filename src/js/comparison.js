@@ -5,6 +5,7 @@ let trackClicked = false
 let start = 'center'
 
 const mouseMoveHandler = (event) => {
+  event = event.changedTouches ? event.changedTouches[0] : event
   const appCoords = $app.getBoundingClientRect()
   const trackHalf = $track.clientWidth / 2
 
@@ -33,6 +34,9 @@ const mouseDownHandler = () => {
   trackClicked = true
   document.addEventListener("mousemove", mouseMoveHandler)
   document.addEventListener("mouseup", mouseUpHandler)
+
+  document.addEventListener("touchmove", mouseMoveHandler)
+  document.addEventListener("touchend", mouseUpHandler)
 }
 
 const initialStart = () => {
@@ -53,6 +57,7 @@ function init() {
   prepareApp()
   initialStart()
   $track.addEventListener("mousedown", mouseDownHandler)
+  $track.addEventListener("touchstart", mouseDownHandler)
 }
 
 function destroy () {
